@@ -1,5 +1,10 @@
 import random
 
+# FILENAME = "alice.txt"
+# FILENAME = "scifi.txt"
+# FILENAME = "war_of_the_worlds.txt"
+FILENAME = "Harry Potter and the Sorcerer.txt"
+
 class Markov(object):
 
   def __init__(self):
@@ -46,5 +51,5 @@ def generate_word_chain(markov, n):
     words.append(next)
   return " ".join(words)
 
-model = make_word_model("alice.txt")
+model = make_word_model(FILENAME)
 print(generate_word_chain(model, 100))
